@@ -15,7 +15,8 @@ class FileProcessing
       reduce_if(->(ctx) { ctx.file_format == 'csv' }, [
         ParserCsv
       ]), reduce_if(->(ctx) { ctx.file_format == 'json' }, [
-      ParserJson
+      ParserJson,
+      CheckJson,
     ]),
       CleanData,
       StoreData,
