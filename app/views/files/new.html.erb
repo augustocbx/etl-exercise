@@ -1,0 +1,17 @@
+<% content_for :javascript, local: true do %>
+  <script type='text/javascript'>
+      $('.custom-file-input').change(function () {
+          let fileName = $(this).val().split('\\').pop();
+          $('.custom-file-label').text(fileName);
+      });
+  </script>
+<% end %>
+
+<%= link_to 'List', action: :index %>
+<%= bootstrap_form_tag(url: files_upload_path) do |f| %>
+  <%= f.alert_message "Please fix the errors below." %>
+  <%= f.radio_button :file_format, 'csv', label: "CSV", checked: true %>
+  <%= f.radio_button :file_format, 'json', label: "JSON" %>
+  <%= f.file_field :file, direct_upload: false, multiple: false, accept: "text/csv,application/json", label: "Add an image" %>
+  <%= f.submit "Import" %>
+<% end %>

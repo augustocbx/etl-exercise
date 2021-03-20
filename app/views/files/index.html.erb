@@ -1,0 +1,23 @@
+<%= link_to 'Upload file', action: :new %>
+
+<table class="table table-striped">
+  <thead>
+  <tr>
+    <th scope="col">Id</th>
+    <th scope="col">Name</th>
+    <th scope="col">Price</th>
+    <th scope="col">Description</th>
+    <th scope="col">Created at</th>
+  </tr>
+  </thead>
+  <tbody>
+  <% @units.each do |unit| %>
+    <tr>
+      <th scope="row"><%=h unit.id %></th>
+      <th scope="row"><%=h unit.name %></th>
+      <th scope="row"><%=h unit.price %></th>
+      <th scope="row"><%=h unit.description %></th>
+      <th scope="row"><%=h unit.created_at %></th>
+  <% end %>
+  </tbody>
+</table>

@@ -13,3 +13,10 @@
  *= require_tree .
  *= require_self
  */
+
+@import "bootstrap";
+@import "rails_bootstrap_forms";
+
+input[type='file'] {
+  color: transparent;
+}

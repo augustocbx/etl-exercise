@@ -16,6 +16,7 @@ end
 
 group :development do
   gem 'listen'
+  gem 'annotate'
 end
 
 group :test do
@@ -30,3 +31,8 @@ end
 gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw, :jruby]
 
 gem 'etl', path: 'lib/etl'
+gem 'bootstrap', '~> 4.0.0'
+gem "bootstrap_form", "~> 4.0"
+gem 'jquery-rails'
+gem 'webdack-uuid_migration', git: 'https://github.com/aguynamedryan/webdack-uuid_migration', ref: '10b30a2494104acdf797b7d62a1cd00b5c3b1f17'
+gem 'etl', path: File.join('./lib/etl')
